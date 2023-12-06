@@ -13,3 +13,19 @@ a{
     text-decoration: none;
     color: #000;
 }
+
+button{
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background-color: #00acee;
+    width: 200px;
+    line-height: 80px;
+    display: inline-block;
+    border-radius: 16px;
+}
+
+.buttons{
+    justify-content: space-between;
+}

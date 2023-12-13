@@ -1,0 +1,19 @@
+body{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-family: serif;
+}
+
+.footer{
+    display: flex;
+    background-color: #000;
+    height: 80px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    padding-top: 16px;
+}
+
+a{
+    padding-top: 16px;
+}

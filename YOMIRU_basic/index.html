@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>YOMIRU</title>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <!-- FirebaseのSDKをインポート -->
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+
+  <!-- Firebaseの構成オブジェクト -->
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyA48j5hvlQkd4NishJTGrNghs2WWTptofU",
+      authDomain: "yomiru-basic.firebaseapp.com",
+      projectId: "yomiru-basic",
+      appId: "1:444280137310:web:e923eaee83c7ebe102f6cf",
+    };
+
+    // Firebase初期化
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</head>
+
+<body>
+  <h1>YOMIRU_basic</h1>
+  <p>YOMIRU_basicにログインするためには、お手持ちのEメールとパスワードが必要です。<br>利用申請は<a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSesEs9ukw93zjn8lU8SI39W1ywsoP6fIGLq9hDmzUSZEXMVuw/viewform?usp=pp_url">こちら</a>から</p>
+
+  <!-- ログインフォーム -->
+  <form id="login-form">
+    <input type="email" id="email" placeholder="Eメール" required><br>
+    <input type="password" id="password" placeholder="パスワード" required><br>
+    <button type="submit">ログイン</button>
+  </form>
+
+  <!-- JavaScript -->
+  <script>
+    const loginForm = document.getElementById('login-form');
+    loginForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // Firebaseログイン処理
+      firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          // ログイン成功時の処理
+          const user = userCredential.user;
+          window.location.href = "https://yomiru.github.io/yomiru/%E3%83%A8%E3%83%9F%E3%83%AB_%E6%9C%AC%E4%BD%93/"; // 別のページにリダイレクト
+        })
+        .catch((error) => {
+          // ログイン失敗時の処理
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.error(errorCode, errorMessage);
+        });
+    });
+  </script>
+
+  <section class="footer">
+    <a href="https://twitter.com/YOMIRU_official"><img src="images/logo-white.png" height="65px"></a>
+    <a href="mailto:yomiru.system@gmail.com"><img src="images/gmail.png" height="65px"></a>
+  </section>
+
+</body>
+
+</html>
+
+<!--636c656174656420627920736f726f6e616f-->

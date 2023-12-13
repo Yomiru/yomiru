@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>YOMIRU</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="/ヨミル/favicons/android-icon-192x192.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <!-- FirebaseのSDKをインポート -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+
+    <!-- Firebaseの構成オブジェクト -->
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyA48j5hvlQkd4NishJTGrNghs2WWTptofU",
+            authDomain: "yomiru-basic.firebaseapp.com",
+            projectId: "yomiru-basic",
+            appId: "1:444280137310:web:e923eaee83c7ebe102f6cf",
+        };
+
+        // Firebase初期化
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1JZ3Y04TH3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-1JZ3Y04TH3');
+</script>
+<script>
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            // ユーザーがログインしている場合
+            console.log("User signed in: ", user);
+        } else {
+            // ユーザーがログアウトしている場合
+            console.log("No user is signed in.");
+            window.location.href = "../../index.html"
+        }
+    });
+</script>
+
+<body>
+    <img src="images/YOMIRU logo(photoshop) - 白黒反転.png" height="144px"><br>
+    <button id="btn">音声認識する</button>
+    <div id="content"></div>
+    <script>
+        const speech = new webkitSpeechRecognition();
+        speech.lang = 'en-US';
+
+        const btn = document.getElementById('btn');
+        const content = document.getElementById('content');
+
+        btn.addEventListener('click', function () {
+            // 音声認識をスタート
+            speech.start();
+        });
+
+        //---------------追記---------------//
+        //音声自動文字起こし機能
+        speech.onresult = function (e) {
+            speech.stop();
+            if (e.results[0].isFinal) {
+                var autotext = e.results[0][0].transcript
+                console.log(e);
+                console.log(autotext);
+                content.innerHTML += '<div>' + autotext + '</div>';
+            }
+        }
+
+        speech.onend = () => {
+            speech.start()
+        };
+        //--------------------------------//
+
+    </script>
+    <footer>Copylight © 2023 YOMIRU, All Rights Reserved</footer>
+</body>
+
+</html>

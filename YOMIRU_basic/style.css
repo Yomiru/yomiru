@@ -5,15 +5,38 @@ body{
     font-family: serif;
 }
 
-.footer{
-    display: flex;
-    background-color: #000;
-    height: 80px;
-    font-size: 14px;
-    letter-spacing: 0.1em;
-    padding-top: 16px;
+.footer img{
+    padding-top: 64px;
+    padding-right: 32px;
+    padding-left: 32px;
 }
 
 a{
     padding-top: 16px;
+    text-decoration: underline;
+    color: #fff;
+}
+
+button{
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background-color: #00acee;
+    width: 200px;
+    line-height: 80px;
+    display: inline-block;
+    border-radius: 16px;
+    margin-top: 8px;
+}
+
+input{
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    width: 200px;
+    line-height: 80px;
+    display: inline-block;
+    border-radius: 16px;
+    margin-top: 8px;
 }

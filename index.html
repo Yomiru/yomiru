@@ -5,24 +5,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
     <title>YOMIRU</title>
 </head>
 
 <body>
+    <header>
+        <ul>
+            <li><a href="https://yomiru.github.io/yomiru"><img src="images/YOMIRU logo透過.png" height="100px"></a></li>
+            <li><a href="#about">YOMIRUとは?</a></li>
+            <li><a href="#good_point">特長</a></li>
+            <li><a href="#plan">プラン</a></li>
+            <li><a href="#signup">お申込み</a></li>
+            <li><a href="#login">ログイン</a></li>
+        </ul>
+    </header>
     <h1>読みを、<br>見る。<br><img src="images/YOMIRU logo(photoshop) - 白黒反転.png" width="500px" align="center"></h1>
-    <h3>YOMIRUとは?</h3>
+    <h3 id="about">YOMIRUとは?</h3>
     <p>客観的に自分の「読み」を聞くことができない先生へ。<span>最新のAI</span>で客観的な読みを見ることができます。</p>
     <p>今の教室の先生の読みでは物足りない英語読み上げ算好きの生徒さんへ。<span>全国トップクラスの</span>先生の読みを聞くことができます。</p>
-    <div class="buttons">
-        <button><a href="./YOMIRU_basic/">ベーシック版(先生用)</a></button>
-        <button><a href="./YOMIRU_student/">生徒版</a></button>
-        <button><a href="./YOMIRU_premium/">プレミアム版(先生用)</a></button>
+
+    <h3 id="good_point">特長</h3><br>
+    <h4>最新のAIで読みを見られる</h4>
+    <p>米Google社の最新AI,Speech-to-textを用いて最新のAIにより「読みを見る」ことを実現。
+        <br>(※YOMIRU_premiumのみ)よりスマートな音声認識へ。
+    </p>
+    <h4>全国の先生の読みが聞ける</h4>
+    <p>全国の先生の英語読み上げ算の「読み」をあなたが見られます。(※現在開発中)</p>
+    <h4>無料からのリーズナブルな価格設定</h4>
+    <p>先生なら、最初は無料から、ということも可能。生徒版も、300円と、お手頃価格。</p>
+
+    <h3 id="plan">プラン</h3>
+    <div class="plans">
+        <div class="plan">
+            <h5>YOMIRU_basic</h5>
+            <p>音声機能のみの、お気軽にご利用いただけるプランです。</p>
+            <h5>￥0</h5>
+        </div>
+        <div class="plan">
+            <h5>YOMIRU_premium</h5>
+            <p>YOMIRUの機能が全て使える先生方向けのプランです。</p>
+            <h5>準備中</h5>
+        </div>
+        <div class="plan">
+            <h5>YOMIRU_student</h5>
+            <p>英語読み上げ算を上達させたい生徒向けのプランです。</p>
+            <h5>準備中</h5>
+        </div>
     </div>
 
-    <section class="money">
-        <h3>料金体系</h3>
-        
+    <h3 id="signup">お申込み</h3><br>
+    <div class="signup">
+        <p>
+            ※チェックを入れてください<br>
+            <input type="checkbox" id="initialButton" onclick="showNextButton()">
+            <a href="files/YOMIRU利用規約.pdf">利用規約</a>、<a href="files/YOMIRUプライバシーポリシー.pdf">プライバシーポリシー</a>
+            に同意します
+        </p>
+    </div>
+
+    <!-- 続くボタン（初めは非表示） -->
+    <div class="nextButton">
+        <a id="nextButton" style="display: none;"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSesEs9ukw93zjn8lU8SI39W1ywsoP6fIGLq9hDmzUSZEXMVuw/viewform?usp=pp_url">申し込みフォーム</a>
+    </div>
+
+    <script>
+        // ボタンを押したときに呼ばれる関数
+        function showNextButton() {
+            // document.getElementById("initialButton").style.display = "none";
+            document.getElementById("nextButton").style.display = "block";
+        }
+    </script>
+
+    <section class="login">
+        <h3 id="login">ログイン</h3><br>
+        <div class="buttons">
+            <a href="./YOMIRU_basic/" class="login_button">ベーシック版(先生用)</a>
+            <a href="./YOMIRU_student/" class="login_button">生徒版</a>
+            <a href="./YOMIRU_premium/" class="login_button">プレミアム版(先生用)</a><br>
+        </div>
     </section>
+
+    <h3>お問い合わせ</h3>
+    <p>YOMIRU Projectへのお問い合わせは以下のボタンよりお願いいたします。</p>
+    <div class="call">
+        <a href="mailto:yomiru.system@gmail.com">お問い合わせ</a>
+    </div>
 
 </body>
 

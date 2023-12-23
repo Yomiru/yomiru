@@ -1,31 +1,148 @@
-body{
+body {
     background-color: #000;
     color: #ffe;
     text-align: center;
     font-family: serif;
+    margin: 0 auto;
 }
 
-h1{
-    font-size: 80px;
-}
-
-a{
-    text-decoration: none;
+header{
+    background-color: rgba(255,255,255,0.9);
     color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
 }
 
-button{
+header ul{
+    list-style: none;
+    column-gap: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header a{
+    color: #000;
+    font-size: 36px;
+    text-decoration: none;
+    justify-content: space-between;
     font-weight: bold;
-    text-align: center;
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 80px;
+    padding-top: 200px;
+}
+
+h3{
+    font-size: 48px;
+    border-bottom: 3px solid #E27A5E;
+    display: inline-block;
+}
+
+h4{
+    font-size: 32px;
+    border-bottom: 3px solid #8AC75A;
+    display: inline-block;
+}
+
+h5{
+    font-size: 24px;
+}
+
+a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+button {
+    font-weight: bold;
+    /* text-align: center; */
     color: #fff;
     text-decoration: none;
     background-color: #00acee;
     width: 200px;
     line-height: 80px;
+    /* display: inline-block; */
+    border-radius: 16px;
+    align-items: center;
+}
+
+.buttons {
+    justify-content: space-between;
+}
+
+.plans {
+    justify-content: space-between;
+}
+
+.plan {
+    background-color: #fff;
+    color: #000;
     display: inline-block;
+    margin: 15px;
     border-radius: 16px;
 }
 
-.buttons{
-    justify-content: space-between;
+.plan h4,
+.plan p {
+    margin: 15px;
+}
+
+#nextButton,
+.call,
+.login_button{
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background-color: #00acee;
+    display: inline-block;
+    width: 200px;
+    /* margin-left: 43%; */
+    line-height: 80px;
+    border-radius: 16px;
+    justify-content:center;
+    margin: 0 auto; 
+}
+
+.call a,
+.login a{
+    text-decoration: none;   
+}
+
+.signup,
+.signup p,
+.signup a{
+    background-color: #fff;
+    color: #000;
+    display: inline-block;
+}
+
+.signup{
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+@media all and (max-width:920px) {
+    body{
+        padding: 0 auto;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .plan {
+        display: block;
+    }
+
+    header{
+        display: none;
+    }
 }

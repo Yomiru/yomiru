@@ -44,7 +44,7 @@ function audioRecognize() {
       let data = {
         "config": {
           "encoding": "LINEAR16",
-          "languageCode": "ja-JP",
+          "languageCode": "en-US",
           "audio_channel_count": 2
         },
         "audio": {

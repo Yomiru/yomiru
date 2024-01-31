@@ -1,0 +1,42 @@
+body{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-family: serif;
+}
+
+.footer img{
+    padding-top: 64px;
+    padding-right: 32px;
+    padding-left: 32px;
+}
+
+a{
+    padding-top: 16px;
+    text-decoration: underline;
+    color: #fff;
+}
+
+button{
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background-color: #00acee;
+    width: 200px;
+    line-height: 80px;
+    display: inline-block;
+    border-radius: 16px;
+    margin-top: 8px;
+}
+
+input{
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    width: 200px;
+    line-height: 80px;
+    display: inline-block;
+    border-radius: 16px;
+    margin-top: 8px;
+}

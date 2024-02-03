@@ -6,8 +6,8 @@ body {
     margin: 0 auto;
 }
 
-header{
-    background-color: rgba(255,255,255,0.9);
+header {
+    background-color: rgba(255, 255, 255, 0.9);
     color: #000;
     display: flex;
     justify-content: space-between;
@@ -15,14 +15,15 @@ header{
     padding: 10px;
 }
 
-header ul{
+header ul {
     list-style: none;
     column-gap: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-header a{
+
+header a {
     color: #000;
     font-size: 36px;
     text-decoration: none;
@@ -30,27 +31,53 @@ header a{
     font-weight: bold;
 }
 
-header a:hover{
+header a:hover {
     text-decoration: underline;
 }
 
-h1 {
-    font-size: 80px;
+.h1_apper {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(150px);
+    transition: all 2s;
+    font-size: 48px;
+    font-feature-settings: 'palt' 1;
+    letter-spacing: 0.1em;
+    margin: 16px;
 }
 
-h3{
+.header_apper {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(0px);
+    transition: all 2s;
+    font-size: 16px;
+}
+
+.h1_apper.show,
+.header_apper.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+}
+
+span{
+    font-size: 150%;
+}
+
+h3 {
     font-size: 48px;
     border-bottom: 3px solid #E27A5E;
     display: inline-block;
 }
 
-h4{
+h4 {
     font-size: 32px;
     border-bottom: 3px solid #8AC75A;
     display: inline-block;
 }
 
-h5{
+h5 {
     font-size: 24px;
 }
 
@@ -82,7 +109,7 @@ a {
 
 #nextButton,
 .call,
-.login_button{
+.login_button {
     text-align: center;
     color: #fff;
     text-decoration: none;
@@ -92,11 +119,11 @@ a {
     /* margin-left: 43%; */
     line-height: 80px;
     border-radius: 16px;
-    justify-content:center;
-    margin: 0 auto; 
+    justify-content: center;
+    margin: 0 auto;
 }
 
-.login_button_junbi{
+.login_button_junbi {
     text-align: center;
     color: #fff;
     text-decoration: none;
@@ -106,32 +133,37 @@ a {
     /* margin-left: 43%; */
     line-height: 80px;
     border-radius: 16px;
-    justify-content:center;
-    margin: 0 auto; 
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .call a,
-.login a{
-    text-decoration: none;   
+.login a {
+    text-decoration: none;
 }
 
 .signup,
 .signup p,
-.signup a{
+.signup a {
     background-color: #fff;
     color: #000;
     display: inline-block;
 }
 
-.signup{
+.signup {
     padding: 20px;
     border-radius: 16px;
     margin-bottom: 16px;
 }
 
 @media all and (max-width:920px) {
-    body{
+    body {
         padding: 0 auto;
+    }
+
+    .h1_apper {
+        padding-top: 64px;
+        font-size: 32px;
     }
 
     img {
@@ -142,7 +174,7 @@ a {
         display: block;
     }
 
-    header{
+    header {
         display: none;
     }
 }

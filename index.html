@@ -14,15 +14,15 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TVZHKJ3DH"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-5TVZHKJ3DH');
+    gtag('config', 'G-5TVZHKJ3DH');
 </script>
 
 <body>
-    <header>
+    <header class="header_apper">
         <ul>
             <li><a href="https://yomiru.github.io/yomiru"><img src="images/YOMIRU logo透過.png" height="100px"></a></li>
             <li><a href="#about">YOMIRUとは?</a></li>
@@ -32,7 +32,54 @@
             <li><a href="#login">ログイン</a></li>
         </ul>
     </header>
-    <h1>読みを、<br>見る。<br><img src="images/YOMIRU logo(photoshop) - 白黒反転.png" width="500px" align="center"></h1>
+    <script>
+        function showElementAnimation() {
+            const elements = document.getElementsByClassName('header_apper');
+
+            const showTiming = window.innerHeight > 768 ? 300 : 40;
+            const scrollY = window.pageYOffset;
+            const windowH = window.innerHeight;
+
+            for (let i = 0; i < elements.length; i++) {
+                // 要素の寸法と、そのビューポートに対する位置を取得
+                const clientRect = elements[i].getBoundingClientRect();
+                const elemY = scrollY + clientRect.top;
+                if (scrollY + windowH - showTiming > elemY) {
+                    elements[i].classList.add('show');
+                } else if (scrollY + windowH < elemY) {
+                    // スクロールを上に戻して再度非表示にする場合はこちらを記述
+                    elements[i].classList.remove('show');
+                }
+            }
+        }
+        showElementAnimation();
+        window.addEventListener('scroll', showElementAnimation);
+    </script>
+    <h1 class="h1_apper"><span>読み</span>を、<br><span>見る</span>。<br><img src="images/YOMIRU logo(photoshop) - 白黒反転.png" width="600px"
+            align="center"></h1>
+    <script>
+        function showElementAnimation() {
+            const elements = document.getElementsByClassName('h1_apper');
+
+            const showTiming = window.innerHeight > 768 ? 300 : 40;
+            const scrollY = window.pageYOffset;
+            const windowH = window.innerHeight;
+
+            for (let i = 0; i < elements.length; i++) {
+                // 要素の寸法と、そのビューポートに対する位置を取得
+                const clientRect = elements[i].getBoundingClientRect();
+                const elemY = scrollY + clientRect.top;
+                if (scrollY + windowH - showTiming > elemY) {
+                    elements[i].classList.add('show');
+                } else if (scrollY + windowH < elemY) {
+                    // スクロールを上に戻して再度非表示にする場合はこちらを記述
+                    elements[i].classList.remove('show');
+                }
+            }
+        }
+        showElementAnimation();
+        window.addEventListener('scroll', showElementAnimation);
+    </script>
     <h3 id="about">YOMIRUとは?</h3>
     <p>客観的に自分の「読み」を聞くことができない先生へ。<span>最新のAI</span>で客観的な読みを見ることができます。</p>
     <p>今の教室の先生の読みでは物足りない英語読み上げ算好きの生徒さんへ。<span>全国トップクラスの</span>先生の読みを聞くことができます。</p>
@@ -104,7 +151,6 @@
     <div class="call">
         <a href="mailto:yomiru.system@gmail.com">お問い合わせ</a>
     </div>
-
 </body>
 
 </html>

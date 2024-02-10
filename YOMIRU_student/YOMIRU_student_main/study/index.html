@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>YOMIRU_student ホーム</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="../../favicons/android-icon-192x192.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <!-- FirebaseのSDKをインポート -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+
+    <!-- Firebaseの構成オブジェクト -->
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCMTU0NVPxs1TVJVReZhahjVJvyKLBjZjE",
+            authDomain: "yomiru-student.firebaseapp.com",
+            projectId: "yomiru-student",
+            appId: "1:19694028330:web:931065608d98cf275a6553",
+        };
+
+        // Firebase初期化
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+</head>
+
+<script>
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            // ユーザーがログインしている場合
+            console.log("User signed in: ", user);
+        } else {
+            // ユーザーがログアウトしている場合
+            console.log("No user is signed in.");
+            window.location.href = "../../../index.html"
+        }
+    });
+</script>
+<body>
+    <h1>STUDY!</h1>
+    <h3>先生の声を聴いて回答を入力しよう!</h3>
+</body>
+</html>

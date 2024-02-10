@@ -32,7 +32,7 @@
 <body>
     <h1>YOMIRU_student</h1>
     <p>YOMIRU_studentにログインするためには、お手持ちのEメールとパスワードが必要です。<br>利用申請は<a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSesEs9ukw93zjn8lU8SI39W1ywsoP6fIGLq9hDmzUSZEXMVuw/viewform?usp=pp_url">こちら</a>から
+            href="https://yomiru.github.io/yomiru/#signup">こちら</a>から
     </p>
 
     <!-- ログインフォーム -->
@@ -55,7 +55,7 @@
                 .then((userCredential) => {
                     // ログイン成功時の処理
                     const user = userCredential.user;
-                    window.location.href = "YOMIRU_basic_main/index.html"; // 別のページにリダイレクト
+                    window.location.href = "YOMIRU_student_main/index.html"; // 別のページにリダイレクト
                 })
                 .catch((error) => {
                     // ログイン失敗時の処理
@@ -67,8 +67,8 @@
     </script>
 
     <section class="footer">
-        <a href="https://twitter.com/YOMIRU_official"><img src="images/logo-white.png" height="65px"></a>
-        <a href="mailto:yomiru.system@gmail.com"><img src="images/gmail.png" height="65px"></a>
+        <a href="https://twitter.com/YOMIRU_official"><img src="../images/twitter.png" height="65px"></a>
+        <a href="mailto:yomiru.system@gmail.com"><img src="../images/gmail.png" height="65px"></a>
     </section>
 
 </body>

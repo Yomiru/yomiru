@@ -86,10 +86,7 @@ a {
     color: #fff;
 }
 
-.buttons {
-    justify-content: space-between;
-}
-
+.buttons,
 .plans {
     justify-content: space-between;
 }

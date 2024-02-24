@@ -86,6 +86,11 @@ a {
     color: #fff;
 }
 
+.about{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
 .buttons,
 .plans {
     justify-content: space-between;

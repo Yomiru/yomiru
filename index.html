@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<head>
+<head prefix="og: https://ogp.me/ns#">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -9,17 +9,23 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <title>YOMIRU</title>
-</head>
+    <meta property="og:url" content="https://yomiru.github.io/yomiru" />
+    <meta property="og:type" content="abacus" />
+    <meta property="og:title" content="YOMIRU" />
+    <meta property="og:description" content="読みを、見る。" />
+    <meta property="og:site_name" content="YOMIRU" />
+    <meta property="og:image" content="https://yomiru.github.io/yomiru/images/YOMIRU%20logo%E9%80%8F%E9%81%8E.png" />
+    </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5TVZHKJ3DH"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TVZHKJ3DH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-5TVZHKJ3DH');
-</script>
+        gtag('config', 'G-5TVZHKJ3DH');
+    </script>
 
 <body>
     <header class="header_apper">
@@ -55,8 +61,8 @@
         showElementAnimation();
         window.addEventListener('scroll', showElementAnimation);
     </script>
-    <h1 class="h1_apper"><span>読み</span>を、<br><span>見る</span>。<br><img src="images/YOMIRU logo(photoshop) - 白黒反転.png" width="600px"
-            align="center"></h1>
+    <h1 class="h1_apper"><span>読み</span>を、<br><span>見る</span>。<br><img src="images/YOMIRU logo(photoshop) - 白黒反転.png"
+            width="600px" align="center"></h1>
     <script>
         function showElementAnimation() {
             const elements = document.getElementsByClassName('h1_apper');
@@ -81,8 +87,8 @@
         window.addEventListener('scroll', showElementAnimation);
     </script>
     <h3 id="about">YOMIRUとは?</h3>
-    <p>客観的に自分の「読み」を聞くことができない先生へ。<span>最新のAI</span>で客観的な読みを見ることができます。</p>
-    <p>今の教室の先生の読みでは物足りない英語読み上げ算好きの生徒さんへ。<span>全国トップクラスの</span>先生の読みを聞くことができます。</p>
+    <p class="about">客観的に自分の「読み」を聞くことができない先生へ。<span>最新のAI</span>で客観的な読みを見ることができます。</p>
+    <p class="about">今の教室の先生の読みでは物足りない英語読み上げ算好きの生徒さんへ。<span>全国トップクラスの</span>先生の読みを聞くことができます。</p>
 
     <h3 id="good_point">特長</h3><br>
     <h4>最新のAIで読みを見られる</h4>
@@ -140,8 +146,8 @@
     <section class="login">
         <h3 id="login">ログイン</h3><br>
         <div class="buttons">
-            <a href="./YOMIRU_basic/" class="login_button">YOMIRU_basic</a>
-            <a href="about:blank#blocked" class="login_button_junbi">準備中</a>
+            <a href="./YOMIRU_basic/index.html" class="login_button">YOMIRU_basic</a>
+            <a href="./YOMIRU_student/index.html" class="login_button">YOMIRU_student</a>
             <a href="about:blank#blocked" class="login_button_junbi">準備中</a><br>
         </div>
     </section>

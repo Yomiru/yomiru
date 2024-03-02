@@ -16,16 +16,25 @@
   <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
 
   <!-- Firebaseの構成オブジェクト -->
-  <script>
-    var firebaseConfig = {
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
       apiKey: "AIzaSyCUqr9CMa4nzBHNKDhfYaP82LQ9nBb2ZrY",
       authDomain: "yomiru-basic-1d8ed.firebaseapp.com",
       projectId: "yomiru-basic-1d8ed",
-      appId: "1:732891232934:web:5bd2bf3ac87e4ff6095267",
+      storageBucket: "yomiru-basic-1d8ed.appspot.com",
+      messagingSenderId: "732891232934",
+      appId: "1:732891232934:web:5bd2bf3ac87e4ff6095267"
     };
-
-    // Firebase初期化
-    firebase.initializeApp(firebaseConfig);
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
   </script>
 </head>
 

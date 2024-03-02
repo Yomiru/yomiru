@@ -30,3 +30,20 @@ a {
     border-radius: 16px;
     margin-top: 8px;
 }
+
+h4{
+    font-size: 32px;
+}
+
+.yomite img{
+    border-radius: 50%;
+}
+
+.yomite{
+    background-color: #fff;
+    color: #000;
+    font-size: 20px;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 16px;
+}

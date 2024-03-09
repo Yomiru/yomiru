@@ -19,10 +19,9 @@
   <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
-  
+
     // Your web app's Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyCUqr9CMa4nzBHNKDhfYaP82LQ9nBb2ZrY",
@@ -32,7 +31,7 @@
       messagingSenderId: "732891232934",
       appId: "1:732891232934:web:5bd2bf3ac87e4ff6095267"
     };
-  
+
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
   </script>
@@ -40,8 +39,7 @@
 
 <body>
   <h1>YOMIRU_basic</h1>
-  <p>YOMIRU_basicにログインするためには、お手持ちのEメールとパスワードが必要です。<br>利用申請は<a
-      href="https://yomiru.github.io/yomiru/#signup">こちら</a>から
+  <p>YOMIRU_basicにログインするためには、お手持ちのEメールとパスワードが必要です。<br>利用申請は<a href="https://yomiru.github.io/yomiru/#signup">こちら</a>から
   </p>
 
   <!-- ログインフォーム -->
@@ -64,7 +62,7 @@
         .then((userCredential) => {
           // ログイン成功時の処理
           const user = userCredential.user;
-          window.location.href = "YOMIRU_basic_main/index.html"; // 別のページにリダイレクト
+          window.location.href = "https://yomiru.github.io/yomiru/YOMIRU_basic/YOMIRU_basic_main/index.html"; // 別のページにリダイレクト
         })
         .catch((error) => {
           // ログイン失敗時の処理

@@ -19,7 +19,7 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
-  
+
     // Your web app's Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyCUqr9CMa4nzBHNKDhfYaP82LQ9nBb2ZrY",
@@ -29,7 +29,7 @@
       messagingSenderId: "732891232934",
       appId: "1:732891232934:web:5bd2bf3ac87e4ff6095267"
     };
-  
+
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
   </script>
@@ -56,12 +56,11 @@
       const password = document.getElementById('password').value;
 
       // Firebaseログイン処理
-      firebase.auth().signInWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-          // ログイン成功時の処理
-          const user = userCredential.user;
-          window.location.href = "https://yomiru.github.io/yomiru/YOMIRU_basic/YOMIRU_basic_main/index.html"; // 別のページにリダイレクト
-        })
+      firebase.auth().signInWithEmailAndPassword(email, password).then((userCredential) => {
+        // ログイン成功時の処理
+        const user = userCredential.user;
+        window.location.href = "https://yomiru.github.io/yomiru/YOMIRU_basic/YOMIRU_basic_main/index.html"; // 別のページにリダイレクト
+      })
         .catch((error) => {
           // ログイン失敗時の処理
           const errorCode = error.code;

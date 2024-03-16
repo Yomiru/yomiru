@@ -36,33 +36,33 @@
   </p>
 
   <!-- ログインフォーム -->
-    <form id="loginForm">
-      <input type="email" id="email" name="email" placeholder="Eメール" required><br>
-      <input type="password" id="password" name="password" placeholder="パスワード" required><br>
-    
-      <button type="button" onclick="login()">ログイン</button>
-    </form>
+  <form id="loginForm">
+    <input type="email" id="email" name="email" placeholder="Eメール" required><br>
+    <input type="password" id="password" name="password" placeholder="パスワード" required><br>
+
+    <button type="button" onclick="login()">ログイン</button>
+  </form>
 
   <!-- JavaScript -->
   <script>
     const loginForm = document.getElementById('login-form');
-    loginForm.addEventListener('submit', (event) => {
+    loginForm.addEventListener('submit', async (event) => {
       event.preventDefault();
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
 
-      // Firebaseログイン処理
-      firebase.auth().signInWithEmailAndPassword(email, password).then((userCredential) => {
+      try {
+        // Firebaseログイン処理
+        const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
         // ログイン成功時の処理
         const user = userCredential.user;
-        window.location.href = "https://yomiru.github.io/yomiru/YOMIRU_basic/YOMIRU_basic_main/index.html"; // 別のページにリダイレクト
-      })
-        .catch((error) => {
-          // ログイン失敗時の処理
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          console.error(errorCode, errorMessage);
-        });
+        window.location.href = "YOMIRU_basic_main/index.html"; // 別のページにリダイレクト
+      } catch (error) {
+        // ログイン失敗時の処理
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error(errorCode, errorMessage);
+      }
     });
   </script>
 

@@ -34,6 +34,7 @@
   <h1>YOMIRU_basic</h1>
   <p>YOMIRU_basicにログインするためには、お手持ちのEメールとパスワードが必要です。<br>利用申請は<a href="https://yomiru.github.io/yomiru/#signup">こちら</a>から
   </p>
+  <p>追記:2024.3.18.17:00現在、YOMIRU_basicにログインできない現象が発生しております。復旧まで少々お待ちください。</p>
 
   <!-- ログインフォーム -->
   <form id="loginForm">
@@ -46,23 +47,24 @@
   <!-- JavaScript -->
   <script>
     const loginForm = document.getElementById('login-form');
-    loginForm.addEventListener('submit', async (event) => {
+    loginForm.addEventListener('submit', (event) => {
       event.preventDefault();
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
 
-      try {
-        // Firebaseログイン処理
-        const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
-        // ログイン成功時の処理
-        const user = userCredential.user;
-        window.location.href = "YOMIRU_basic_main/index.html"; // 別のページにリダイレクト
-      } catch (error) {
-        // ログイン失敗時の処理
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.error(errorCode, errorMessage);
-      }
+      // Firebaseログイン処理
+      firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          // ログイン成功時の処理
+          const user = userCredential.user;
+          window.location.href = "YOMIRU_basic_main/index.html"; // 別のページにリダイレクト
+        })
+        .catch((error) => {
+          // ログイン失敗時の処理
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.error(errorCode, errorMessage);
+        });
     });
   </script>
 

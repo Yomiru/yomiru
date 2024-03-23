@@ -28,7 +28,6 @@ button{
     /* line-height: 80px; */
     display: inline-block;
     border-radius: 16px;
-    margin-top: 8px;
 }
 
 a{
@@ -43,4 +42,5 @@ input{
     display: flex;
     height: 50px;
     min-height: 0px;
+    padding: 10px;
 }

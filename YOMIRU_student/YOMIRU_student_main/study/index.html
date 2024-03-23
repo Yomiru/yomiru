@@ -40,13 +40,115 @@
         }
     });
 </script>
+
 <body>
     <h1>STUDY!</h1>
     <h3>先生の声を聴いて回答を入力しよう!</h3>
+    <h3>7-13桁10口(30-35秒) 黄俊豪先生</h3>
     <div class="question">
-    <audio src="music/春の吹く場所で.mp3" controls></audio>
-    <input type="text">
-    <button>答え合わせ</button>
+        <audio src="music/YOMIRUNo1.mp3" controls></audio>
+        <input type="text" id="No1">
+        <button onclick="checkAnswer1()">答え合わせ</button>
+        <img id="resultImage" src="">
     </div>
+    <div class="question">
+        <audio src="music/YOMIRUNo2.mp3" controls></audio>
+        <input type="text" id="No2">
+        <button onclick="checkAnswer2()">答え合わせ</button>
+        <img id="resultImage" src="">
+    </div>
+    <div class="question">
+        <audio src="music/YOMIRUNo3.mp3" controls></audio>
+        <input type="text" id="No3">
+        <button onclick="checkAnswer3()">答え合わせ</button>
+        <img id="resultImage" src="">
+    </div>
+    <div class="question">
+        <audio src="music/YOMIRUNo4.mp3" controls></audio>
+        <input type="text" id="No4">
+        <button onclick="checkAnswer4()">答え合わせ</button>
+        <img id="resultImage" src="">
+    </div>
+    <div class="question">
+        <audio src="music/YOMIRUNo5.mp3" controls></audio>
+        <input type="text" id="No5">
+        <button onclick="checkAnswer5()">答え合わせ</button>
+        <img id="resultImage" src="">
+    </div>
+
+    <script>
+        function checkAnswer1() {
+            // 入力フィールドから入力されたテキストを取得
+            var userInput = document.getElementById("No1").value;
+            var correctAnswer = "2568362085954";
+
+            // 入力されたテキストと答えを比較
+            if (userInput === correctAnswer) {
+                // 一致する場合は正解の画像を表示
+                document.getElementById("resultImage").src = "../images/correct.png";
+            } else {
+                // 一致しない場合は不正解の画像を表示
+                document.getElementById("resultImage").src = "../images/uncorrect.png";
+            }
+        }
+        function checkAnswer2() {
+            // 入力フィールドから入力されたテキストを取得
+            var userInput = document.getElementById("No2").value;
+            var correctAnswer = "5882374730158";
+
+            // 入力されたテキストと答えを比較
+            if (userInput === correctAnswer) {
+                // 一致する場合は正解の画像を表示
+                document.getElementById("resultImage").src = "../images/correct.png";
+            } else {
+                // 一致しない場合は不正解の画像を表示
+                document.getElementById("resultImage").src = "../images/uncorrect.png";
+            }
+        }
+        function checkAnswer3() {
+            // 入力フィールドから入力されたテキストを取得
+            var userInput = document.getElementById("No3").value;
+            var correctAnswer = "3101644480604";
+
+            // 入力されたテキストと答えを比較
+            if (userInput === correctAnswer) {
+                // 一致する場合は正解の画像を表示
+                document.getElementById("resultImage").src = "../images/correct.png";
+            } else {
+                // 一致しない場合は不正解の画像を表示
+                document.getElementById("resultImage").src = "../images/uncorrect.png";
+            }
+        }
+        function checkAnswer4() {
+            // 入力フィールドから入力されたテキストを取得
+            var userInput = document.getElementById("No4").value;
+            var correctAnswer = "14204439333978";
+
+            // 入力されたテキストと答えを比較
+            if (userInput === correctAnswer) {
+                // 一致する場合は正解の画像を表示
+                document.getElementById("resultImage").src = "../images/correct.png";
+            } else {
+                // 一致しない場合は不正解の画像を表示
+                document.getElementById("resultImage").src = "../images/uncorrect.png";
+            }
+        }
+        function checkAnswer5() {
+            // 入力フィールドから入力されたテキストを取得
+            var userInput = document.getElementById("No5").value;
+            var correctAnswer = "11237554054652";
+
+            // 入力されたテキストと答えを比較
+            if (userInput === correctAnswer) {
+                // 一致する場合は正解の画像を表示
+                document.getElementById("resultImage").src = "../images/correct.png";
+            } else {
+                // 一致しない場合は不正解の画像を表示
+                document.getElementById("resultImage").src = "../images/uncorrect.png";
+            }
+        }
+    </script>
+
 </body>
+
 </html>

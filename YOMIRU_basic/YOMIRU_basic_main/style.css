@@ -33,3 +33,9 @@ button{
 a{
     padding-top: 16px;
 }
+
+#rec{
+    width: 200px;
+    display: none;
+    text-align: center;
+}

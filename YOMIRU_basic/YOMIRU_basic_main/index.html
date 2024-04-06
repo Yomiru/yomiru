@@ -45,7 +45,8 @@
 
 <body>
     <a href="../../index.html"><img src="images/YOMIRU logo(photoshop) - 白黒反転.png" height="144px"></a><br>
-    <button id="btn">音声認識する</button>
+    <button id="btn">音声認識する</button><br>
+    <img src="" id="rec"><br>
     <div id="content"></div>
     <script>
         const speech = new webkitSpeechRecognition();
@@ -57,6 +58,8 @@
         btn.addEventListener('click', function () {
             // 音声認識をスタート
             speech.start();
+            document.getElementById("rec").src = "images/Recording_now.png";
+            document.getElementById("rec").style.display = "inline-block";
         });
 
         //---------------追記---------------//

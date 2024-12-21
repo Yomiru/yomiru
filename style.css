@@ -61,7 +61,7 @@ header a:hover {
     transform: translateX(0px);
 }
 
-span{
+span {
     font-size: 150%;
 }
 
@@ -86,7 +86,7 @@ a {
     color: #fff;
 }
 
-.about{
+.about {
     padding-right: 15px;
     padding-left: 15px;
 }
@@ -158,14 +158,21 @@ a {
     margin-bottom: 16px;
 }
 
-.newses table{
+table {
+    width: 100%;
     text-align: center;
-    border: 2px;
-    border-color: #fff;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-tr{
-  margin:10px  
+table th {
+    padding: 10px;
+    border: solid 1px #778ca3;
+}
+
+table td {
+    padding: 10px;
+    border: solid 1px #778ca3;
 }
 
 @media all and (max-width:920px) {

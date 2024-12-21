@@ -158,6 +158,12 @@ a {
     margin-bottom: 16px;
 }
 
+.newses table{
+    text-align: center;
+    border: 2px;
+    border-color: #fff;
+}
+
 @media all and (max-width:920px) {
     body {
         padding: 0 auto;

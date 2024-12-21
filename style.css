@@ -164,6 +164,10 @@ a {
     border-color: #fff;
 }
 
+tr{
+  margin:10px  
+}
+
 @media all and (max-width:920px) {
     body {
         padding: 0 auto;
